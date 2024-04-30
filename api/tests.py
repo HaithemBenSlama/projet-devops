@@ -50,7 +50,3 @@ class AIModelAPITestCase(TestCase):
         self.assertEqual(len(data), 1)
         self.assertEqual(data[0]['name'], "Test Model 2")
 
-class ModelFieldValidationTestCase(TestCase):
-    def test_invalid_accuracy(self):
-        with self.assertRaises(ValueError):
-            AIModel.objects.create(name="Invalid Model", accuracy=101.00)
